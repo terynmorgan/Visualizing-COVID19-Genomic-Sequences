@@ -22,10 +22,10 @@ Pairwise sequence alignment is used to identify regions of similarity between al
 7. A grouped bar graph and heatmap were developed to analyze the pairwise sequence alignment two-way table.
 8. A grouped bar graph was developed to analyze the amino acid frequency distribution. 
 9. A boxplot was developed from frequencies in Threonine to test if there is an outlier with a higher amino acid frequency. 
-10. A T-Test and Kruskal-Wallis H Test were performed on two arrays of Threonine frequencies: with and without the outlier.
+10. A T-Test and Kruskal-Wallis H Test were performed on two arrays of Threonine frequencies: with and without the outlier. Values were exported to a csv.
 
 **Required Files:** <br/>
-Genome Dataset -> Folder containing 42 txt files of complete COVID-19 genome sequences
+Genome dataset -> Folder containing 42 txt files of complete COVID-19 genome sequences
 INFO211_Final_Project.py -> Python script that conducts comparative analysis between COVID-19 sequences
 
 **Output Files:** <br/>
@@ -36,13 +36,14 @@ INFO211_Final_Project.py -> Python script that conducts comparative analysis bet
 - Pairwise Alignment Heatmap.png
 - AA Distribution Chart.png
 - AA Boxplot.png
+- Statistical Analysis.csv
 
 **Conclusion:** <br/>
 **GC Content-**<br/> The GC contents for coronaviruses range approximately from 32 to 43 percent. This is concurrent with the results from the GC content metadata in *GC Content Graph.png* as all values lied between 33 and 38 percent. In comparison to the whole sample set, Sequences 28, 29, and 42 vary being approximately 4 percent lower than the GC content mean of 37.75 percent.<br/>
 
 **Pairwise Sequence Alignment-**<br/> *Pairwise Alignment Chart.png* shows Sequences 28, 29, and 42 have the lowest alignment scores compared to other sequences. This is concordant to visualization of the GC content for these sequences as well. *Pairwise Alignment Heatmap.png* supports this with a high concentration of sequences aligned within 99 percent and a stark difference in the alignment scores of Sequences 28, 29, and 42 compared to the whole. Since these sequences displayed a visual difference in comparison to the whole sample set, they were extracted from the larger two-way table for closer analysis. From *Pairwise Alignment Comparison.png* Sequence 42 was the least aligned with all other sequences but had the highest alignment score with Sequence 29 at 93.54 percent showing they are similar, but not a perfect match. Sequence 30 was the least aligned with Sequence 42 at 89.84 percent. <br/>
 
-**Amino Acid Frequency Distribution-**<br/> From *AA Distribution Chart.png*, the amino acids most often expressed were Alanine, Cysteine, Glycine, Threonine and Serine. Looking at Threonine, there appeared to be an outlier with a higher frequency. *AA Boxplot.png* shows that this observed value is an outlier since it lies outside the range of the upper whisker. The p-value of 0.78 from a T-Test didn’t indicate statistical significance that the outlier had an impact on the amino acid distribution between sequences. Additionally, the p-value 0.85 from a Kruskal-Wallis H Test did not indicate the outlier had a statistical significance on the distribution. Using normaltest(), the array without the outlier had a slightly more normal distribution than when the outlier was included. This showed the outlier did have some effect on the overall distribution, but still wasn’t statistically significant as there was only a difference of 0.06 between these two tests. <br/>
+**Amino Acid Frequency Distribution-**<br/> From *AA Distribution Chart.png*, the amino acids most often expressed were Alanine, Cysteine, Glycine, Threonine and Serine. Looking at Threonine, there appeared to be an outlier with a higher frequency. *AA Boxplot.png* shows that this observed value is an outlier since it lies outside the range of the upper whisker. The p-value of 0.78 from a T-Test didn’t indicate statistical significance that the outlier had an impact on the amino acid distribution between sequences. Additionally, the p-value 0.85 from a Kruskal-Wallis H Test did not indicate the outlier had a statistical significance on the distribution. Using normaltest(), the array without the outlier had a slightly more normal distribution than when the outlier was included. This showed the outlier did have some effect on the overall distribution, but still wasn’t statistically significant as there was only a difference of 0.06 between these two tests. These tests can be seen in *Statistical Analysis.csv*<br/>
 
 **References:** <br/>
 Goldman, A. D., & Landweber, L. F. (2016). What Is a Genome? PLOS Genetics, 12(7), e1006181. https://doi.org/10.1371/journal.pgen.1006181 <br/>
